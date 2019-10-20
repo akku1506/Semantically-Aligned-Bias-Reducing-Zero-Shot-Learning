@@ -1,0 +1,3 @@
+python cls_condwgan.py --manualSeed 3483 --cls_weight 0.1 --preprocessing --image_embedding "./SABR/features/SUN/features_resnet_ae_nodec"  --class_embedding "./SABR/features/SUN/att" --netG_name MLP_G --netD_name MLP_CRITIC --nepoch 95 --ngh 2048 --ndh 4096 --lr 0.0002 --classifier_lr 0.001 --lambda1 10 --critic_iter 5 --dataset SUN --batch_size 128 --nz 102 --attSize 102 --resSize 1024 --syn_num 300 --modeldir "./SABR/models/SUN/SABR-I/models_sun/" --model_path "./SABR/models/SUN/logs_classifier_now/models_134.ckpt" --nclass_all 717 --gzsl
+#unseen=50.6944, seen=35.0775, h=41.4643
+#unseen=62.8
