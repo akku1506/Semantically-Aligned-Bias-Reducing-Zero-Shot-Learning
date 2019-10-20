@@ -30,7 +30,7 @@ where, $dataset_name can be AWA2, CUB or SUN.
 
 and $setting can be i for inductive setting and t for transductive setting.
 
-## Train from scratch and evaluating
+## Training from scratch and evaluating
 
 1. Run the train_i.sh and train_t.sh for the dataset you wish to run the scripts for.
 
