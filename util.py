@@ -31,7 +31,7 @@ class DATA_LOADER(object):
         self.epochs_completed = 0
                 
     def read_mat_h5dataset(self, opt):
-        fid = h5py.File(opt.dataroot + "/" + opt.dataset + "/" + opt.image_embedding + ".h5", 'r')
+        fid = h5py.File(opt.image_embedding + ".h5", 'r')
         feature = np.array(fid['feature']).squeeze()
         label = np.array(fid['label']).astype(int).squeeze() - 1
         print (feature)
@@ -43,7 +43,7 @@ class DATA_LOADER(object):
         #print (feature1)
         #print (label1)
         #sys.exit(0)
-        matcontent = sio.loadmat(opt.dataroot + "/" + opt.dataset + "/" + opt.class_embedding + "_splits.mat")
+        matcontent = sio.loadmat(opt.class_embedding + "_splits.mat")
         # numpy array index starts from 0, matlab starts from 1
         trainval_loc = matcontent['trainval_loc'].squeeze() - 1
         train_loc = matcontent['train_loc'].squeeze() - 1

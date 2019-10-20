@@ -411,7 +411,7 @@ with tf.Session(graph = g2) as sess:
     for var in params:
         print (var.name+"\t")
 
-    string = opt.modeldir+'/models_'+str(opt.nepoch-1)+'.ckpt'
+    string = opt.modeldir+'models_'+str(opt.nepoch-1)+'.ckpt'
     #string = opt.modeldir+'/models_'+str(109)+'.ckpt'
 
     print (string) 
@@ -451,7 +451,7 @@ if opt.gzsl:
     train_X = np.concatenate((data.train_feature, syn_res), axis=0)
     train_Y = np.concatenate((data.train_label, syn_label), axis=0)
     nclass = opt.nclass_all
-    train_cls = classifier2.CLASSIFICATION2(train_X, train_Y, data, nclass, 'logs_gzsl_classifier','models_gzsl_classifier', opt.classifier_lr, 0.5, 50, 128, True)
+    train_cls = classifier2.CLASSIFICATION2(train_X, train_Y, data, nclass, opt.modeldir+"logs_gzsl_classifier",opt.modeldir+"models_gzsl_classifier", opt.classifier_lr, 0.5, 50, 128, True)
     print('unseen=%.4f, seen=%.4f, h=%.4f' % (train_cls.acc_unseen, train_cls.acc_seen, train_cls.H))
     
 else:

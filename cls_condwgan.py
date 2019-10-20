@@ -14,7 +14,7 @@ import classifier2
 parser = argparse.ArgumentParser()
 parser.add_argument('--model_path', default='./logs_classifier_now/models_27.ckpt', type=str)
 parser.add_argument('--dataset', default='FLO', help='FLO')
-parser.add_argument('--dataroot', default='/BS/xian/work/cvpr18-code-release/data/', help='path to dataset')
+# parser.add_argument('--dataroot', default='/BS/xian/work/cvpr18-code-release/data/', help='path to dataset')
 parser.add_argument('--matdataset', default=True, help='Data in matlab format')
 parser.add_argument('--image_embedding', default='res101')
 parser.add_argument('--class_embedding', default='att')
@@ -338,7 +338,7 @@ with tf.Session(graph = g2) as sess:
         print (var.name+"\t")
 
     string = opt.modeldir+'/models_'+str(opt.nepoch-1)+'.ckpt'
-    #string = opt.modeldir+'/models_'+str(65)+'.ckpt'
+    # string = opt.modeldir+'models_'+str(0)+'.ckpt'
     #string = './models_'+str(9)+'.ckpt'
 
     print (string) 
@@ -389,11 +389,11 @@ if opt.gzsl:
     train_X = np.concatenate((data.train_feature, syn_res), axis=0)
     train_Y = np.concatenate((data.train_label, syn_label), axis=0)
     nclass = opt.nclass_all
-    train_cls = classifier2.CLASSIFICATION2(train_X, train_Y, data, nclass, 'logs_gzsl_classifier','models_gzsl_classifier', opt.classifier_lr, 0.5, 50, 100, True)
+    train_cls = classifier2.CLASSIFICATION2(train_X, train_Y, data, nclass, opt.modeldir+"logs_gzsl_classifier",opt.modeldir+"models_gzsl_classifier", opt.classifier_lr, 0.5, 50, 100, True)
     print('unseen=%.4f, seen=%.4f, h=%.4f' % (train_cls.acc_unseen, train_cls.acc_seen, train_cls.H))
     
 else:
-    train_cls = classifier2.CLASSIFICATION2(syn_res, util.map_label(syn_label, data.unseenclasses), data, data.unseenclasses.shape[0], 'logs_zsl_classifier','models_zsl_classifier', opt.classifier_lr , 0.5, 50, 100, False)
+    train_cls = classifier2.CLASSIFICATION2(syn_res, util.map_label(syn_label, data.unseenclasses), data, data.unseenclasses.shape[0], opt.modeldir+'logs_zsl_classifier',opt.modeldir+'models_zsl_classifier', opt.classifier_lr , 0.5, 50, 100, False)
     acc = train_cls.acc
     print('unseen class accuracy= ', acc)
 
