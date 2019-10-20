@@ -16,7 +16,8 @@ Official Github repository for Semantically Aligned Bias Reducing ZSL in Tensorf
 ```
 $dataset_name_train_$setting.sh
 ```
-where, dataset_name can be AWA2, CUB or SUN
+where, dataset_name can be AWA2, CUB or SUN.
+
 and $setting can be i for inductive setting and t for transductive setting.
 
 ## Train from scratch and evaluating
@@ -29,6 +30,7 @@ For each possible setting, you would obtain results in two lines like the sample
 # unseen=27.9557, seen=90.5525, h=42.7221
 ```
 The first line indicates the conventional ZSL performance.
+
 The second lines denotes the performance in the generalized ZSL setting.
 
 ## Loading the pre-trained models and evaluating
