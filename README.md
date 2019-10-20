@@ -1,5 +1,5 @@
 # Semantically-Aligned-Bias-Reducing-Zero-Shot-Learning
-Official Github repository for Semantically Aligned Bias Reducing ZSL in Tensorflow. If you find this code useful in your research, please consider citing:
+Official Github repository for Semantically Aligned Bias Reducing ZSL(http://openaccess.thecvf.com/content_CVPR_2019/papers/Paul_Semantically_Aligned_Bias_Reducing_Zero_Shot_Learning_CVPR_2019_paper.pdf) in Tensorflow. If you find this code useful in your research, please consider citing:
 
 ```
 @inproceedings{paul2019semantically,
