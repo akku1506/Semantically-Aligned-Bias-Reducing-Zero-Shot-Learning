@@ -1,5 +1,15 @@
 # Semantically-Aligned-Bias-Reducing-Zero-Shot-Learning
-Official Github repository for Semantically Aligned Bias Reducing ZSL in Tensorflow
+Official Github repository for Semantically Aligned Bias Reducing ZSL in Tensorflow. If you find this code useful in your research, please consider citing:
+
+```
+@inproceedings{paul2019semantically,
+  title={Semantically Aligned Bias Reducing Zero Shot Learning},
+  author={Paul, Akanksha and Krishnan, Narayanan C and Munjal, Prateek},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={7056--7065},
+  year={2019}
+}
+```
 
 ## Pre-Requisites
 1. Python=3.5+, Tensorflow-gpu= 1.9
@@ -37,14 +47,3 @@ The first line indicates the conventional ZSL performance while the second lines
 2. Run the train_i.sh and train_t.sh for the dataset you wish to run the scripts for.
 
 
-## If you find this code useful in your research, please consider citing:
-
-```
-@inproceedings{paul2019semantically,
-  title={Semantically Aligned Bias Reducing Zero Shot Learning},
-  author={Paul, Akanksha and Krishnan, Narayanan C and Munjal, Prateek},
-  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
-  pages={7056--7065},
-  year={2019}
-}
-```
