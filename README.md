@@ -36,7 +36,8 @@ The first line indicates the conventional ZSL performance while the second lines
 1. Comment out the lines 210-310 in cls_condwgan.py and lines 283-384 in sep_clswgan.py
 2. Run the train_i.sh and train_t.sh for the dataset you wish to run the scripts for.
 
-If you find this code useful in your research, please consider citing:
+
+## If you find this code useful in your research, please consider citing:
 
 ```
 @inproceedings{paul2019semantically,
